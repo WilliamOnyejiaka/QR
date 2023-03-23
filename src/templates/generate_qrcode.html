@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+
+{% block head%}
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/generate_qrcode.css') }}">
+
+    <script defer type="module" src="{{ url_for('static',filename='scripts/dist/generate_qrcode.js') }}"></script>
+    <title>Generate QRCode</title>
+{% endblock %}
+
+
+{%block body%}
+    <div class="drop-area">
+        <h1 id="default-text">Generated QR Code Goes Here</h1>
+        <img src="#" alt="" id="image-preview" class="">
+    </div>
+    <div class="controls">
+        <button id="reset-btn" class="btn"> Reset</button>
+        <button id="show-input" class="btn">Show Input</button>
+        <button id="download-btn" class="btn"> Download Image</button>
+    </div>
+{%endblock %}
+

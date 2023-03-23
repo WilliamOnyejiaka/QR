@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+        <script src="https://kit.fontawesome.com/9357709718.js" crossorigin="anonymous"></script>
+
+        {%block head%}{% endblock %}
+    </head>
+    <body>
+        {%block body%}{%endblock%}
+        
+        <div class="modal" id="modal">
+            <header class="modal-header">
+                <h3 class="modal-title"></h3>
+                <button class="header-close-btn" data-target-modal="#modal">&times;</button>
+            </header>
+            <main class="modal-body" contenteditable="true"></main>
+            <footer class="modal-footer">
+                <button class="footer-btn" data-btn-type="close">Close</button>
+            </footer>
+        </div>
+        <div class="overlay"></div>
+    </body>
+</html>

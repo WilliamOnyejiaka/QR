@@ -1,0 +1,74 @@
+@import 'base';
+@import 'variables';
+@import 'btn';
+
+
+.drop-area {
+    display: flex;
+    height: 500px;
+    width: 700px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px dashed $white;
+    border-radius: 5px;
+
+    &.active {
+        border: 2px solid $white;
+    }
+
+    .icon {
+        display: none;
+        font-size: 100px;
+        color: $white;
+
+        &.active {
+            display: block;
+        }
+    }
+    
+
+    .drop-area-title {
+        display: none;
+        font-size: 30px;
+        color: $white;
+
+        &.active {
+            display: block; 
+        }
+    }
+
+    #OR {
+        display: none;
+        font-size: 30px;
+        margin: 10px 0 10px 0;
+        color: $white;
+
+        &.active{
+            display: block;
+        }
+    }
+
+    #browse-btn {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    #image-preview{
+        display: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #image-preview.active {
+        display: block;
+    }
+}
+
+.controls {
+    margin-top: 20px;
+}

@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+
+{%block head%}
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/index.css') }}">
+    <script defer type="module" src="{{ url_for('static',filename='scripts/dist/script.js') }}"></script>
+    <title>Home</title>
+{%endblock%}
+
+{% block body%}
+    <button id="decode" class="btn">Decode</button>
+    <button id="generate-qrcode" class="btn">Generate QrCode</button>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+
+{% block head%}
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/decode.css') }}">
+    <script defer type="module" src="{{ url_for('static',filename='scripts/dist/decode.js') }}"></script>
+    <title>Decode QRCode</title>
+{% endblock %}
+
+
+{%block body%}
+    <div class="drop-area">
+        <div class="icon active"><i class="fas fa-cloud-upload-alt"></i></div>
+        <header class="drop-area-title active">Drag & Drop QRCode Here</header>
+        <span id="OR" class="active">OR</span>
+        <button id="browse-btn" class="btn active">Browse File</button>
+        <input type="file" id="image-file" hidden>
+        <img src="" alt="" id="image-preview" class="">
+    </div>
+
+    <div class="controls">
+        <button class="btn" id="reset-btn">Reset</button>
+        <button class="btn" id="decode-btn">Decode</button>
+    </div>
+{%endblock %}
